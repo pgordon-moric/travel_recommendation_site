@@ -31,60 +31,68 @@ nav a {
 
 /*Body*/
 
-body{
-    margin: 0;
-}
-
-.hero {
+.hero{
     min-height: calc(100vh - 60px);
     background-image: url("./traveling-background.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
-
+    padding: 70px 50px;
 }
 
-.about h1{
+.herotext{
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    padding: 80px 60px;
     color: white;
-    font-size: 60px;
-    margin-bottom: 20px;
+}
+
+.herotext h1 {
+    font-size: 70px;
+    margin-bottom: 25px;
+}
+
+.herotext p {
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .about-box{
-    max-width: 900px;
-    padding: 20px;
-    color: white;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 60px;
 }
 
-.herotext {
-    position: absolute;
-    top: 50%;
-    left: 60px;
-    transform: translateY(-50%);
-    max-width: 500px;
+.content {
+    position: relative;
+    z-index: 1;
     color: white;
+    padding: 70px 50px;
+}
+
+.team-section {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.team-title h2 {
+    color: white;
+    font-size: 60px;
+    line-height: 1;
 }
 
 .team{
-    margin-top: 50px;
     display: flex;
-    align-items: center;
-    gap: 40px;
+    gap: 60px;
 }
 
-.team h2{
-    color: white;
-    font-size: 48px;
-}
-
-.team-box{
-    display: flex;
-    gap: 30px;
-}
-
-.member{
-    width: 220px;
-    padding: 20px;
-    color: white;
-    border-radius: 8px;
+.role{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 12px;
+    background: #2f6fd5;
+    border-radius: 4px;
+    font-size: 13px;
 }
