@@ -31,9 +31,18 @@ nav a {
 
 /*Body*/
 
-body{
+body {
     background-image: url("./traveling-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.herotext {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    max-width: 500px;
+    color: white;
 }
