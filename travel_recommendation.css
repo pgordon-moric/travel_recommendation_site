@@ -31,11 +31,17 @@ nav a {
 
 /*Body*/
 
-body {
+body{
+    margin: 0;
+}
+
+.hero {
+    min-height: calc(100vh - 60px);
     background-image: url("./traveling-background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+
 }
 
 .herotext {
@@ -45,4 +51,10 @@ body {
     transform: translateY(-50%);
     max-width: 500px;
     color: white;
+}
+
+.teamtext{
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
