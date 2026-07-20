@@ -44,6 +44,18 @@ body{
 
 }
 
+.about h1{
+    color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.about-box{
+    max-width: 900px;
+    padding: 20px;
+    color: white;
+}
+
 .herotext {
     position: absolute;
     top: 50%;
@@ -53,8 +65,26 @@ body{
     color: white;
 }
 
-.teamtext{
-    padding: 20px;
+.team{
+    margin-top: 50px;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 40px;
+}
+
+.team h2{
+    color: white;
+    font-size: 48px;
+}
+
+.team-box{
+    display: flex;
+    gap: 30px;
+}
+
+.member{
+    width: 220px;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
 }
