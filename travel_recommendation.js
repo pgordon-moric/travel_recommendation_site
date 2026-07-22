@@ -7,15 +7,15 @@ function searchDestinations(){
     const input = document.getElementById("recs").value.toLowerCase();
     const resultDiv = document.getElementById("results");
     resultDiv.innerHTML = '';
-    console.log(input);
+    console.log("Input:", input);
 
     fetch("./travel_recommendation_api.json")
-        .then(response => response.json())
+        .then(response => { console.log(response); return response.json()})
         .then(data =>{
             const destination = data.countries.find(item => item.name.toLowerCase() === input);
-            console.log(destination === true );
+            console.log(destination);
         })
-    }
+}
 
 
 addSearchButton.addEventListener("click",searchDestinations);
