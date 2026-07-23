@@ -38,7 +38,19 @@ function searchDestinations(){
                     console.log(data.beaches[i].name);
                 }
             }
+            console.log("before foreach");
+            results.forEach(destination => {
+                console.log("forEach loop: ", destination.name);
+               /* resultDiv.innerHTML += `
+                    <div class="card>
+                        <img src=${destination.imageURL}">
+                        <h3>${destination.name}</h3>
+                        <p>${destination.description}</p>
+                    </div>
+                `;*/
+            });
         })
+
 }
 
 
