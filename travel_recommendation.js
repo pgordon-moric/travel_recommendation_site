@@ -13,41 +13,44 @@ function searchDestinations(){
     fetch("./travel_recommendation_api.json")
         .then(response => { console.log("First then: ", response); return response.json()})
         .then(data =>{
-            console.log(data.countries.length);
             //Keyword searches
             //Countries
-            if(input === "country"){
+            if(input === "country" || input === "countries"){
                 for (let i=0; i < data.countries.length; i++){
-                        results.push(data.countries[i]);
-                        console.log("Country: ", data.countries[i]);
+                    //console.log("Country: ", data.countries[i]);
+                    let country = data.countries[i];
+                    for (let j=0; j < country.cities.length; j++){
+                        //console.log("City: ", country.cities[j]);
+                        results.push(country.cities[j]);
+                    }
                 }
             } else
             //temples
             //if a temple is found, add it to results
-            if(input === "temple"){
+            if(input === "temple" || input === "temples"){
                 for (let i=0; i < data.temples.length; i++){
                     results.push(data.temples[i]);
-                    console.log(data.temples[i].name);
+                    //console.log(data.temples[i].name);
                 }
             } else
             //beaches
             //if a beach is found, add it to results
-            if(input === "beach"){
+            if(input === "beach" || input === "beaches"){
                 for (let i=0; i < data.beaches.length; i++){
                     results.push(data.beaches[i]);
-                    console.log(data.beaches[i].name);
+                    //console.log(data.beaches[i].name);
                 }
             }
-            console.log("before foreach");
+           // console.log("before foreach");
             results.forEach(destination => {
                 console.log("forEach loop: ", destination.name);
-               /* resultDiv.innerHTML += `
-                    <div class="card>
-                        <img src=${destination.imageURL}">
+                resultDiv.innerHTML += `
+                    <div class="card">
+                        <img src=${destination.imageUrl}>
                         <h3>${destination.name}</h3>
                         <p>${destination.description}</p>
                     </div>
-                `;*/
+                `;
             });
         })
 
